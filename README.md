@@ -2,8 +2,10 @@
 # A Teams installer by myself
 Special thanks: archive.org 
 
-git clone https://github.com/hhk02/teamsinstallerscript
+# How to use?
+`git clone https://github.com/hhk02/teamsinstallerscript`
 
-chmod +x teamsinstallerscript
+`chmod +x teamsinstallerscript`
 
-sudo ./teamsinstallerscript
+`sudo ./teamsinstallerscript`
+
