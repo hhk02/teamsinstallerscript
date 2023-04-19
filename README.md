@@ -1,7 +1,7 @@
 # TeamsInstallerScript by hhk02 
 # A Teams downloader/installer by myself
 
-Thanks to teams aur package mainteiner (ogarcia) for discover the link with archive.org
+(ACTUALLY) Thanks to teams aur package mainteiner (ogarcia) for discover the link with archive.org
 
 # How to use?
 `git clone https://github.com/hhk02/teamsinstallerscript`
