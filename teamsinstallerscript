@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $EUID -eq 0 ]; then
+    echo "Made by hhk02"
+    echo "Downloading Teams from archive.org"
+    echo "This Teams version maybe stop working in the future!"
+    wget https://web.archive.org/web/20221130115842if_/https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.5.00.23861_amd64.deb
+    apt install -y teams*.deb
+    echo "Installation complete!"
+    teams &
+else
+    echo "Please run this script as root"
+fi
