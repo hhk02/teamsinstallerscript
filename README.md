@@ -10,3 +10,8 @@
 
 `sudo ./teamsinstallerscript`
 
+# Issues
+
+- I have a blank screen
+
+Run teams --disable-gpu in the terminal.. Looks like a bug.
