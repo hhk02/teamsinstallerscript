@@ -19,7 +19,7 @@ if [ $EUID -eq 0 ]; then
             dnf install binutils -y
         fi
     else
-        ar -x teams*
+        ar -x teams_*
         echo "Extracting Teams...."
         tar xvf data.tar.xz --directory=/
         echo "Updating applications..."
