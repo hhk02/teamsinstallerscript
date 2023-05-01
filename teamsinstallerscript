@@ -5,7 +5,26 @@ if [ $EUID -eq 0 ]; then
     echo "Downloading Teams from archive.org"
     echo "This Teams version maybe stop working in the future!"
     wget https://web.archive.org/web/20221130115842if_/https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.5.00.23861_amd64.deb
-    apt install -y ./teams*.deb
+    if [ ! -f /usr/bin/ar ]; then
+        if [ -f /usr/bin/pacman ]; then
+            echo "Arch detected"
+            pacman -S binutils --noconfirm
+        fi
+        if [ -f /usr/bin/apt ]; then
+            echo "Debian/Ubuntu detected"
+            apt install binutils -y
+        fi
+        if [ -f /usr/bin/dnf ]; then
+            echo "Fedora/CentOS detected"
+            dnf install binutils -y
+        fi
+    else
+        ar -x teams*
+        echo "Extracting Teams...."
+        tar xvf data.tar.xz --directory=/
+        echo "Updating applications..."
+        echo "Done!"
+    fi
     echo "Installation complete!"
     teams &
 else
